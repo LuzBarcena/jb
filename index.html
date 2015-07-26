@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jardín Botánico</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+	<script src="slider.js"></script>
+	<script src="noticia.json"></script>
+</head>
+<body>
+	<div class="contenedor">
+		<header>
+			<div>
+				<img src="logo.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#"><span class="icon-home3"></span>Home</a></li>
+					<li><a href="#"><span class="icon-search"></span>Enciclopedia</a>
+						<ul class="children">
+							<li><a href="busqueda-avanzada.html">B&uacute;squeda Avanzada</a></li>
+							<li><a href="busqueda-avanzada.html">B&uacute;squeda Simple</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><span class="icon-leaf"></span>Jardin Botanico</a>
+						<ul class="children">
+							<li><a href="">Informaci&oacute;n</a></li>
+							<li><a href="">Novedades</a></li>
+							<li><a href="">Visita 360º</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><span class="icon-smile"></span>Quienes Somos</a>
+						<ul class="children">
+							<li><a href="quienes-somos.html">Grupo de Trabajo</a></li>
+							<li><a href="quienes-somos.html">Contacto</a></li>
+						</ul>
+					</li>	
+				</ul>	
+			</nav>
+		</header>
+
+
+		<section class="section-slider">
+			<div class="main">
+				<div class="slides">
+					<img src="slider-1.png" alt="">
+					<img src="slider-2.png" alt="">
+					<img src="slider-3.png" alt="">
+					<img src="slider-4.png" alt="">
+					<img src="slider-5.png" alt="">
+				</div>
+			</div>
+		</section>
+
+		<section id="section-noticias">
+				Cargando
+		</section>
+
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery.slides.js"></script>
+		<script>
+			$(function(){
+				 $(".slides").slidesjs({
+				   play: {
+				     active: true,
+				       // [boolean] Generate the play and stop buttons.
+				     effect: "slide",
+				       // [string] Can be either "slide" or "fade".
+				     interval: 3000,
+				       // [number] Time spent on each slide in milliseconds.
+				     auto: true,
+				        // [boolean] Start playing the slideshow on load.
+				     swap: true,
+				       // [boolean] show/hide stop and play buttons
+				    pauseOnHover: false,
+				       // [boolean] pause a playing slideshow on hover
+				     restartDelay: 2500
+				       // [number] restart delay on inactive slideshow
+				   }
+				 });
+			});
+		</script>
+		<script>
+			new Noticia(document.querySelector("#section-noticias"));
+		</script>
+</body>
+</html>
