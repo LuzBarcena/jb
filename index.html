@@ -9,36 +9,43 @@
 	<link rel="stylesheet" href="fonts.css">
 	<script src="slider.js"></script>
 	<script src="noticia.json"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
 	<div class="contenedor">
 		<header>
-			<div>
+			<div class="menu_bar">
+				<a href="#" class="bt-menu"><span class="icon-leaf"></span>Men&uacute;</a>
+			</div>
+			<div class="logo-header">
 				<img src="logo.png">
 			</div>
 			<nav>
 				<ul>
 					<li><a href="#"><span class="icon-home3"></span>Home</a></li>
-					<li><a href="#"><span class="icon-search"></span>Enciclopedia</a>
+					<li class="submenu"><a href="#"><span class="icon-search"></span>Enciclopedia<span class="caret icon-search"></span></a>
 						<ul class="children">
 							<li><a href="busqueda-avanzada.html">B&uacute;squeda Avanzada</a></li>
 							<li><a href="busqueda-avanzada.html">B&uacute;squeda Simple</a></li>
 						</ul>
 					</li>
-					<li><a href="#"><span class="icon-leaf"></span>Jardin Botanico</a>
+					<li class="submenu"><a href="#"><span class="icon-leaf"></span>Jardin Botanico<span class="caret icon-leaf"></span></a>
 						<ul class="children">
 							<li><a href="">Informaci&oacute;n</a></li>
+							<li><a href="">Objetivos</a></li>
 							<li><a href="">Novedades</a></li>
+							<li><a href="">Mapa del jard&iacute;n</a></li>
 							<li><a href="">Visita 360º</a></li>
 						</ul>
 					</li>
-					<li><a href="#"><span class="icon-smile"></span>Quienes Somos</a>
+					<li class="submenu"><a href="#"><span class="icon-smile"></span>Quienes Somos<span class="caret icon-smile"></span></a>
 						<ul class="children">
 							<li><a href="quienes-somos.html">Grupo de Trabajo</a></li>
 							<li><a href="quienes-somos.html">Contacto</a></li>
 						</ul>
-					</li>	
-				</ul>	
+					</li>
+				</ul>
 			</nav>
 		</header>
 
@@ -56,10 +63,53 @@
 		</section>
 
 		<section id="section-noticias">
-				Cargando
+			<a href="#">Novedades</a>
+			<div>
+				<article id="noticia-1">
+					<h3> Titulo 1</h3>
+					<figure>
+						<img src="noticia1.jpg" alt="Pino" title="Pino 1">
+						<figcaption>
+							Esto es una palmera
+						</figcaption>
+					</figure>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed commodi tenetur distinctio quibusdam explicabo pariatur ipsam, rerum rem magni quae id dolores vero repudiandae perspiciatis placeat soluta? Soluta, fuga, vero. </p>
+					<footer>
+						<a href="#">Leer M&aacute;s...</a>
+					</footer>
+				</article>
+				<article id="noticia-2">
+					<h3> Ejemplo de titulo 2</h3>
+					<figure>
+						<img src="noticia2.jpg" alt="Pino" title="Pino 2">
+						<figcaption>
+							Esto es una rosa
+						</figcaption>
+					</figure>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed commodi tenetur distinctio quibusdam explicabo pariatur ipsam, rerum rem magni quae id dolores vero repudiandae perspiciatis placeat soluta? Soluta, fuga, vero. </p>
+					<footer>
+						<a href="#">Leer M&aacute;s...</a>
+					</footer>
+				</article>
+				<article id="noticia-3">
+					<h3> El titulo de la noticia 3 va aca dasjkdhuais ndasuib ndasbiud bhsdasn hfhf hjf</h3>
+					<figure>
+						<img src="noticia3.jpg" alt="Pino" title="Pino 3">
+						<figcaption>
+							Esto es un jazmin
+						</figcaption>
+					</figure>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed commodi tenetur distinctio quibusdam explicabo pariatur ipsam, rerum rem magni quae id dolores vero repudiandae perspiciatis placeat soluta? Soluta, fuga, vero. </p>
+					<footer>
+						<a href="#">Leer M&aacute;s...</a>
+					</footer>
+				</article>
+			</div>
 		</section>
 
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<section>
+
+		</section>
 		<script src="js/jquery.slides.js"></script>
 		<script>
 			$(function(){
@@ -83,8 +133,9 @@
 				 });
 			});
 		</script>
-		<script>
+	<!-- <script>
 			new Noticia(document.querySelector("#section-noticias"));
-		</script>
+		</script> -->
+	</div>
 </body>
 </html>
